@@ -5,10 +5,15 @@
     margin: 0;
 }
 
+html {
+    overflow: hidden;
+}
+
 body {
     background-color: #E4DCCF;
     font-size: 10px;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Settings panel */
