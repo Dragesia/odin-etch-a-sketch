@@ -33,6 +33,16 @@ upButton.addEventListener("click", () => {
     }
     divs++;
     size.textContent = divs;
+    for(let i=0; i<divs*divs; i++) {
+        container.appendChild(div.cloneNode());
+    }
+    childDivs = document.querySelectorAll("#container div");
+    childDivs.forEach(ch => {
+        ch.style.backgroundColor = "white";
+        ch.addEventListener("mouseover", () => {
+            ch.style.backgroundColor = currentColor;
+        });
+    });
 });
 
 downButton.addEventListener("click", () => {
@@ -44,4 +54,14 @@ downButton.addEventListener("click", () => {
     }
     divs--;
     size.textContent = divs;
+    for(let i=0; i<divs*divs; i++) {
+        container.appendChild(div.cloneNode());
+    }
+    childDivs = document.querySelectorAll("#container div");
+    childDivs.forEach(ch => {
+        ch.style.backgroundColor = "white";
+        ch.addEventListener("mouseover", () => {
+            ch.style.backgroundColor = currentColor;
+        });
+    });
 });
