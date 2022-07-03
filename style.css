@@ -28,7 +28,6 @@ body {
     width: 60px; /* temp */ 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -46,6 +45,31 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
 	border: none;
     border-radius: 100px;
+}
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid black;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 30px solid black;
+}
+
+#size {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+#size-settings {
+    margin-top: 1rem;
 }
 
 /* Container */
