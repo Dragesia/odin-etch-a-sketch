@@ -70,3 +70,10 @@ downButton.addEventListener("click", () => {
     container.style.gridTemplateRows = `repeat(${divs}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${divs}, 1fr)`;
 });
+
+clear.addEventListener("click", () => {
+    childDivs = document.querySelectorAll("#container div");
+    childDivs.forEach(ch => {
+        ch.style.backgroundColor = "white";
+    });
+});
