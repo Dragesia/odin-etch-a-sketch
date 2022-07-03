@@ -6,6 +6,7 @@ const size = document.querySelector("#size");
 const colorPicker = document.querySelector("#color-picker");
 const randomColor = document.querySelector("#random-color");
 const grayer = document.querySelector("#grayer");
+const clear = document.querySelector("#clear");
 
 let divs = 1;
 
