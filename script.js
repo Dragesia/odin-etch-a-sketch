@@ -44,6 +44,8 @@ upButton.addEventListener("click", () => {
             ch.style.backgroundColor = currentColor;
         });
     });
+    container.style.gridTemplateRows = `repeat(${divs}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${divs}, 1fr)`;
 });
 
 downButton.addEventListener("click", () => {
@@ -65,4 +67,6 @@ downButton.addEventListener("click", () => {
             ch.style.backgroundColor = currentColor;
         });
     });
+    container.style.gridTemplateRows = `repeat(${divs}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${divs}, 1fr)`;
 });
