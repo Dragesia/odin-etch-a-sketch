@@ -9,9 +9,27 @@ const grayer = document.querySelector("#grayer");
 
 let divs = 1;
 
+const div = document.createElement("div");
+container.appendChild(div);
+
+let childDivs = document.querySelectorAll("#container div");
+
+let currentColor = "black";
+
+colorPicker.addEventListener("mouseout", () => {
+    currentColor = colorPicker.value;
+});
+
+childDivs[0].addEventListener("mouseover", () => {
+    childDivs[0].style.backgroundColor = currentColor;
+});
+
 upButton.addEventListener("click", () => {
     if (divs == 50) {
         return;
+    }
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
     }
     divs++;
     size.textContent = divs;
@@ -20,6 +38,9 @@ upButton.addEventListener("click", () => {
 downButton.addEventListener("click", () => {
     if (divs == 1) {
         return;
+    }
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
     }
     divs--;
     size.textContent = divs;
