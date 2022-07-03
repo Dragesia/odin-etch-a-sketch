@@ -94,6 +94,15 @@ input[type="color"]::-webkit-color-swatch {
     border: 0;
 }
 
+#clear {
+    margin-top: 1rem;
+    width: 45px;
+    height: 45px;
+    background-color: #F0EBE3;
+    outline: 0;
+    border: 0;
+}
+
 /* Container */
 
 #container {
@@ -104,8 +113,5 @@ input[type="color"]::-webkit-color-swatch {
     box-shadow: 0 0 4px black;
 }
 
-.divClass {
-    height: 100%;
-    width: 100%;
-}
+
 
