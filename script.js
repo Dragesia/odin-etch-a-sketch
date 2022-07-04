@@ -19,6 +19,12 @@ let currentColor = "black";
 
 colorPicker.addEventListener("mouseout", () => {
     currentColor = colorPicker.value;
+    childDivs = document.querySelectorAll("#container div");
+    childDivs.forEach(ch => {
+        ch.addEventListener("mouseout", () => {
+            currentColor = colorPicker.value;
+        });
+    });
 });
 
 childDivs[0].addEventListener("mouseover", () => {
@@ -86,4 +92,14 @@ function generateRandomColor(){
     let randColor = randomNumber.padStart(6, 0);   
     return `#${randColor.toUpperCase()}`
 }
+
+randomColor.addEventListener("click", () => {
+    currentColor = generateRandomColor();
+    childDivs = document.querySelectorAll("#container div");
+    childDivs.forEach(ch => {
+        ch.addEventListener("mouseout", () => {
+            currentColor = generateRandomColor();
+        });
+    });
+});
 
